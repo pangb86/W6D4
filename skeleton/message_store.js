@@ -17,7 +17,14 @@ const MessageStore = {
 
   getSentMessages : () => {
     return MessageStore.messages.sent;
-  }
+  },
+
+  message : (from, to, subject, body) => {
+    let messageContents = {to: to, from: from, subject: subject, body: body};
+  },
+
+  messageDraft : MessageStore.message(),
+  
 };
 
 
